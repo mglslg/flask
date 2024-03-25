@@ -1,9 +1,24 @@
+Version 3.0.2
+-------------
+
+Released 2024-02-03
+
+-   Correct type for ``jinja_loader`` property. :issue:`5388`
+-   Fix error with ``--extra-files`` and ``--exclude-patterns`` CLI options.
+    :issue:`5391`
+
+
 Version 3.0.1
 -------------
 
-Unreleased
+Released 2024-01-18
 
 -   Correct type for ``path`` argument to ``send_file``. :issue:`5230`
+-   Fix a typo in an error message for the ``flask run --key`` option. :pr:`5344`
+-   Session data is untagged without relying on the built-in ``json.loads``
+    ``object_hook``. This allows other JSON providers that don't implement that.
+    :issue:`5381`
+-   Address more type findings when using mypy strict mode. :pr:`5383`
 
 
 Version 3.0.0
